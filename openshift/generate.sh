@@ -36,8 +36,7 @@ generate \
   --generators dockerfile \
   --excludes "vendor.*" \
   --excludes "third_party.*" \
-  --images-from eventing \
-  --images-from eventing-kafka-broker
+  --images-from eventing
 
 "$repo_root_dir/hack/update-codegen.sh"
 
