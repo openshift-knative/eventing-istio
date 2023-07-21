@@ -1,0 +1,31 @@
+diff --git a/third_party/cert-manager/02-cert-manager.yaml b/third_party/cert-manager/02-cert-manager.yaml
+index 24bd41f2a..6b6da5df8 100644
+--- a/third_party/cert-manager/02-cert-manager.yaml
++++ b/third_party/cert-manager/02-cert-manager.yaml
+@@ -5265,8 +5265,6 @@ spec:
+       serviceAccountName: cert-manager-cainjector
+       securityContext:
+         runAsNonRoot: true
+-        seccompProfile:
+-          type: RuntimeDefault
+       containers:
+         - name: cert-manager-cainjector
+           image: "quay.io/jetstack/cert-manager-cainjector:v1.11.1"
+@@ -5322,8 +5320,6 @@ spec:
+       serviceAccountName: cert-manager
+       securityContext:
+         runAsNonRoot: true
+-        seccompProfile:
+-          type: RuntimeDefault
+       containers:
+         - name: cert-manager-controller
+           image: "quay.io/jetstack/cert-manager-controller:v1.11.1"
+@@ -5382,8 +5378,6 @@ spec:
+       serviceAccountName: cert-manager-webhook
+       securityContext:
+         runAsNonRoot: true
+-        seccompProfile:
+-          type: RuntimeDefault
+       containers:
+         - name: cert-manager-webhook
+           image: "quay.io/jetstack/cert-manager-webhook:v1.11.1"
