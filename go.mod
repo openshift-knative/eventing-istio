@@ -10,7 +10,7 @@ require (
 	istio.io/api v0.0.0-20221208070204-0528cb6ce63b
 	istio.io/client-go v1.16.1
 	k8s.io/api v0.29.2
-	k8s.io/apimachinery v0.29.2
+	k8s.io/apimachinery v0.29.13
 	k8s.io/client-go v0.29.2
 	k8s.io/utils v0.0.0-20240102154912-e7106e64919e
 	knative.dev/eventing v0.42.0
