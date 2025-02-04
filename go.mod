@@ -6,9 +6,9 @@ require (
 	github.com/google/go-cmp v0.6.0
 	github.com/hashicorp/golang-lru v1.0.2
 	go.uber.org/zap v1.27.0
-	google.golang.org/protobuf v1.35.1
-	istio.io/api v0.0.0-20221208070204-0528cb6ce63b
-	istio.io/client-go v1.16.1
+	google.golang.org/protobuf v1.36.4
+	istio.io/api v1.24.2-0.20241206152109-43afb8563706
+	istio.io/client-go v1.24.2
 	k8s.io/api v0.30.3
 	k8s.io/apimachinery v0.30.3
 	k8s.io/client-go v0.30.3
