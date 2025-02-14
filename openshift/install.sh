@@ -7,12 +7,10 @@ function install_eventing_with_mesh() {
     KNATIVE_EVENTING_ISTIO_MANIFESTS_DIR="${SCRIPT_DIR}/release/artifacts"
     export KNATIVE_EVENTING_ISTIO_MANIFESTS_DIR
 
-    go install github.com/openshift-knative/hack/cmd/sobranch@latest
-
     local release
     release=$(yq r "${SCRIPT_DIR}/project.yaml" project.tag)
     release=${release/knative-/}
-    so_branch=$( $(go env GOPATH)/bin/sobranch --upstream-version "${release}")
+    so_branch=$(go run github.com/openshift-knative/hack/cmd/sobranch@latest --upstream-version "${release}")
 
     USE_IMAGE_RELEASE_TAG="$(yq r "${SCRIPT_DIR}/project.yaml" project.tag)"
     export USE_IMAGE_RELEASE_TAG
