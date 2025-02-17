@@ -9,9 +9,9 @@ require (
 	google.golang.org/protobuf v1.35.1
 	istio.io/api v0.0.0-20221208070204-0528cb6ce63b
 	istio.io/client-go v1.16.1
-	k8s.io/api v0.30.3
-	k8s.io/apimachinery v0.30.3
-	k8s.io/client-go v0.30.3
+	k8s.io/api v0.30.10
+	k8s.io/apimachinery v0.30.10
+	k8s.io/client-go v0.30.10
 	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8
 	knative.dev/eventing v0.43.0
 	knative.dev/hack v0.0.0-20241010131451-05b2fb30cb4d
