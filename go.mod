@@ -3,10 +3,10 @@ module knative.dev/eventing-istio
 go 1.22.0
 
 require (
-	github.com/google/go-cmp v0.6.0
+	github.com/google/go-cmp v0.7.0
 	github.com/hashicorp/golang-lru v1.0.2
 	go.uber.org/zap v1.27.0
-	google.golang.org/protobuf v1.35.1
+	google.golang.org/protobuf v1.36.6
 	istio.io/api v0.0.0-20221208070204-0528cb6ce63b
 	istio.io/client-go v1.16.1
 	k8s.io/api v0.30.3
