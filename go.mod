@@ -7,8 +7,8 @@ require (
 	github.com/hashicorp/golang-lru v1.0.2
 	go.uber.org/zap v1.27.0
 	google.golang.org/protobuf v1.36.6
-	istio.io/api v1.25.2
-	istio.io/client-go v1.25.2
+	istio.io/api v1.26.3-0.20250708203130-20827773ee1b
+	istio.io/client-go v1.26.3
 	k8s.io/api v0.33.1
 	k8s.io/apimachinery v0.33.1
 	k8s.io/client-go v0.33.1
