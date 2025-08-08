@@ -817,6 +817,9 @@ message HTTPMatchRequest {
   // with the given labels. If the VirtualService has a list of gateways specified
   // in the top-level `gateways` field, it must include the reserved gateway
   // `mesh` for this field to be applicable.
+  //
+  // **Note:** This is not a runtime match, but is a selector; it filters which workloads the
+  // VirtualService applies to.
   map<string, string> source_labels = 7;
 
   // Names of gateways where the rule should be applied. Gateway names
@@ -855,6 +858,9 @@ message HTTPMatchRequest {
   // Source namespace constraining the applicability of a rule to workloads in that namespace.
   // If the VirtualService has a list of gateways specified in the top-level `gateways` field,
   // it must include the reserved gateway `mesh` for this field to be applicable.
+  //
+  // **Note:** This is not a runtime match, but is a selector; it filters which workloads the
+  // VirtualService applies to.
   string source_namespace = 13;
 
   // The human readable prefix to use when emitting statistics for this route.
@@ -983,6 +989,9 @@ message L4MatchAttributes {
   // workloads with the given labels. If the VirtualService has a list of
   // gateways specified in the top-level `gateways` field, it should include the reserved gateway
   // `mesh` in order for this field to be applicable.
+  //
+  // **Note:** This is not a runtime match, but is a selector; it filters which workloads the
+  // VirtualService applies to.
   map<string, string> source_labels = 4;
 
   // Names of gateways where the rule should be applied. Gateway names
@@ -993,6 +1002,9 @@ message L4MatchAttributes {
   // Source namespace constraining the applicability of a rule to workloads in that namespace.
   // If the VirtualService has a list of gateways specified in the top-level `gateways` field,
   // it must include the reserved gateway `mesh` for this field to be applicable.
+  //
+  // **Note:** This is not a runtime match, but is a selector; it filters which workloads the
+  // VirtualService applies to.
   string source_namespace = 6;
 }
 
@@ -1021,6 +1033,9 @@ message TLSMatchAttributes {
   // workloads with the given labels. If the VirtualService has a list of
   // gateways specified in the top-level `gateways` field, it should include the reserved gateway
   // `mesh` in order for this field to be applicable.
+  //
+  // **Note:** This is not a runtime match, but is a selector; it filters which workloads the
+  // VirtualService applies to.  
   map<string, string> source_labels = 5;
 
   // Names of gateways where the rule should be applied. Gateway names
@@ -1031,6 +1046,9 @@ message TLSMatchAttributes {
   // Source namespace constraining the applicability of a rule to workloads in that namespace.
   // If the VirtualService has a list of gateways specified in the top-level `gateways` field,
   // it must include the reserved gateway `mesh` for this field to be applicable.
+  //
+  // **Note:** This is not a runtime match, but is a selector; it filters which workloads the
+  // VirtualService applies to.  
   string source_namespace = 7;
 }
 
@@ -1313,6 +1331,17 @@ message HTTPRetry {
   // Flag to specify whether the retries should retry to other localities.
   // See the [retry plugin configuration](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/http/http_connection_management#retry-plugin-configuration) for more details.
   google.protobuf.BoolValue retry_remote_localities = 4;
+
+  // Flag to specify whether the retries should ignore previously tried hosts during retry.
+  // Defaults to true.
+  google.protobuf.BoolValue retry_ignore_previous_hosts = 5;
+
+  // Specifies the minimum duration between retry attempts.
+  // If unset, default minimum duration of 25ms is used as base interval for exponetial backoff.
+  // This has an impact on the total number of retries that will be attempted based on the `attempts` field
+  // and route timeout. For example, with attempts is set to 3, backoff to 2s and timeout to 3s, the request will 
+  // be retried only once.
+  google.protobuf.Duration backoff = 6;
 }
 
 // Describes the Cross-Origin Resource Sharing (CORS) policy, for a given
