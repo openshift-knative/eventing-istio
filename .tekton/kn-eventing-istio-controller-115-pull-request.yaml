@@ -25,7 +25,7 @@ spec:
         - GO_RUNTIME=registry.access.redhat.com/ubi8/ubi-minimal
         - JAVA_BUILDER=registry.access.redhat.com/ubi8/openjdk-21
         - JAVA_RUNTIME=registry.access.redhat.com/ubi8/openjdk-21-runtime
-        - VERSION=1.35.0
+        - VERSION=1.35.1
     - name: git-url
       value: '{{source_url}}'
     - name: hermetic
@@ -39,9 +39,19 @@ spec:
         - linux/x86_64
     - name: revision
       value: '{{revision}}'
+  taskRunSpecs:
+    - pipelineTaskName: sast-shell-check
+      stepSpecs:
+        - name: sast-shell-check
+          computeResources:
+            requests:
+              memory: 4Gi
+            limits:
+              memory: 4Gi
   pipelineRef:
     name: docker-build
-  taskRunTemplate: {}
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-kn-eventing-istio-controller-115
   workspaces:
     - name: git-auth
       secret:
