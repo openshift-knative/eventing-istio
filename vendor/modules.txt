@@ -345,8 +345,8 @@ google.golang.org/grpc/serviceconfig
 google.golang.org/grpc/stats
 google.golang.org/grpc/status
 google.golang.org/grpc/tap
-# google.golang.org/protobuf v1.36.5
-## explicit; go 1.21
+# google.golang.org/protobuf v1.36.8
+## explicit; go 1.23
 google.golang.org/protobuf/encoding/protodelim
 google.golang.org/protobuf/encoding/protojson
 google.golang.org/protobuf/encoding/prototext
@@ -402,16 +402,16 @@ gopkg.in/yaml.v2
 # gopkg.in/yaml.v3 v3.0.1
 ## explicit
 gopkg.in/yaml.v3
-# istio.io/api v0.0.0-20221208070204-0528cb6ce63b
+# istio.io/api v0.0.0-20230711220847-08f4f4a00d6e
 ## explicit; go 1.18
 istio.io/api/analysis/v1alpha1
 istio.io/api/meta/v1alpha1
 istio.io/api/networking/v1beta1
 istio.io/api/type/v1beta1
-# istio.io/client-go v1.16.1
+# istio.io/client-go v1.16.6
 ## explicit; go 1.17
 istio.io/client-go/pkg/apis/networking/v1beta1
-# k8s.io/api v0.31.6
+# k8s.io/api v0.31.12
 ## explicit; go 1.22.0
 k8s.io/api/admission/v1
 k8s.io/api/admissionregistration/v1
@@ -474,7 +474,7 @@ k8s.io/api/storagemigration/v1alpha1
 ## explicit; go 1.22.0
 k8s.io/apiextensions-apiserver/pkg/apis/apiextensions
 k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1
-# k8s.io/apimachinery v0.31.6
+# k8s.io/apimachinery v0.31.12
 ## explicit; go 1.22.0
 k8s.io/apimachinery/pkg/api/equality
 k8s.io/apimachinery/pkg/api/errors
@@ -528,7 +528,7 @@ k8s.io/apimachinery/pkg/version
 k8s.io/apimachinery/pkg/watch
 k8s.io/apimachinery/third_party/forked/golang/json
 k8s.io/apimachinery/third_party/forked/golang/reflect
-# k8s.io/client-go v0.31.6
+# k8s.io/client-go v0.31.12
 ## explicit; go 1.22.0
 k8s.io/client-go/applyconfigurations
 k8s.io/client-go/applyconfigurations/admissionregistration/v1
