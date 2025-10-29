@@ -22,8 +22,8 @@ COPY LICENSE /licenses/
 USER 65532
 
 LABEL \
-      com.redhat.component="openshift-serverless-1-eventing-istio-controller-rhel9-container" \
-      name="openshift-serverless-1/eventing-istio-controller-rhel9" \
+      com.redhat.component="openshift-serverless-1-kn-eventing-istio-controller-rhel9-container" \
+      name="openshift-serverless-1/kn-eventing-istio-controller-rhel9" \
       version=$VERSION \
       summary="Red Hat OpenShift Serverless 1 Eventing Istio Controller" \
       maintainer="serverless-support@redhat.com" \
@@ -31,6 +31,8 @@ LABEL \
       io.k8s.display-name="Red Hat OpenShift Serverless 1 Eventing Istio Controller" \
       io.k8s.description="Red Hat OpenShift Serverless Eventing Istio Controller" \
       io.openshift.tags="controller" \
+      vendor="Red Hat, Inc." \
+      release=$VERSION \
       cpe="cpe:/a:redhat:openshift_serverless:1.37::el9"
 
 ENTRYPOINT ["/usr/bin/controller"]
