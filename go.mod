@@ -5,7 +5,7 @@ go 1.23.0
 require (
 	github.com/google/go-cmp v0.7.0
 	github.com/hashicorp/golang-lru v1.0.2
-	go.uber.org/zap v1.27.0
+	go.uber.org/zap v1.27.1
 	google.golang.org/protobuf v1.36.6
 	istio.io/api v1.25.2
 	istio.io/client-go v1.25.2
