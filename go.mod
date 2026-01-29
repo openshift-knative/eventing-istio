@@ -5,13 +5,13 @@ go 1.23.0
 require (
 	github.com/google/go-cmp v0.7.0
 	github.com/hashicorp/golang-lru v1.0.2
-	go.uber.org/zap v1.27.0
 	google.golang.org/protobuf v1.36.10
+	go.uber.org/zap v1.27.1
 	istio.io/api v0.0.0-20230711220847-08f4f4a00d6e
 	istio.io/client-go v1.16.6
-	k8s.io/api v0.31.13
-	k8s.io/apimachinery v0.31.13
-	k8s.io/client-go v0.31.13
+	k8s.io/api v0.31.14
+	k8s.io/apimachinery v0.31.14
+	k8s.io/client-go v0.31.14
 	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8
 	knative.dev/eventing v0.44.0
 	knative.dev/hack v0.0.0-20250116150306-c142b4835bc5
