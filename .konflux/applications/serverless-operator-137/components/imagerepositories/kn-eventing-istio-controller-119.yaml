@@ -4,10 +4,10 @@ metadata:
   annotations:
     image-controller.appstudio.redhat.com/update-component-image: "true"
   labels:
-    appstudio.redhat.com/application: serverless-operator-139
+    appstudio.redhat.com/application: serverless-operator-137
     appstudio.redhat.com/component: kn-eventing-istio-controller-119
   name: kn-eventing-istio-controller-119
 spec:
   image:
-    name: serverless-operator-139/kn-eventing-istio-controller
+    name: serverless-operator-137/kn-eventing-istio-controller
     visibility: public
