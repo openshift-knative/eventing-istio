@@ -7,11 +7,11 @@ require (
 	github.com/hashicorp/golang-lru v1.0.2
 	go.uber.org/zap v1.27.1
 	google.golang.org/protobuf v1.36.10
-	istio.io/api v1.25.2
-	istio.io/client-go v1.25.2
-	k8s.io/api v0.34.3
-	k8s.io/apimachinery v0.34.3
-	k8s.io/client-go v0.34.3
+	istio.io/api v1.25.5
+	istio.io/client-go v1.25.5
+	k8s.io/api v0.34.4
+	k8s.io/apimachinery v0.34.4
+	k8s.io/client-go v0.34.4
 	k8s.io/utils v0.0.0-20250604170112-4c0f3b243397
 	knative.dev/eventing v0.48.0
 	knative.dev/hack v0.0.0-20260120115810-bf6758cba446
