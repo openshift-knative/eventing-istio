@@ -17,7 +17,7 @@ metadata:
   name: config-kafka-channel-data-plane
   namespace: knative-eventing
   labels:
-    app.kubernetes.io/version: "20260907-f8b215f54"
+    app.kubernetes.io/version: "20260910-897a44bb0"
   annotations:
     knative.dev/example-checksum: "6ce544b6"
 data:
@@ -196,7 +196,7 @@ kind: ClusterRole
 metadata:
   name: knative-kafka-channel-data-plane
   labels:
-    app.kubernetes.io/version: "20260907-f8b215f54"
+    app.kubernetes.io/version: "20260910-897a44bb0"
 rules:
   - apiGroups:
       - ""
@@ -243,7 +243,7 @@ metadata:
   name: knative-kafka-channel-data-plane
   namespace: knative-eventing
   labels:
-    app.kubernetes.io/version: "20260907-f8b215f54"
+    app.kubernetes.io/version: "20260910-897a44bb0"
 
 ---
 # Copyright 2021 The Knative Authors
@@ -264,7 +264,7 @@ kind: ClusterRoleBinding
 metadata:
   name: knative-kafka-channel-data-plane
   labels:
-    app.kubernetes.io/version: "20260907-f8b215f54"
+    app.kubernetes.io/version: "20260910-897a44bb0"
 subjects:
   - kind: ServiceAccount
     name: knative-kafka-channel-data-plane
@@ -295,7 +295,7 @@ metadata:
   namespace: knative-eventing
   labels:
     app: kafka-channel-dispatcher
-    app.kubernetes.io/version: "20260907-f8b215f54"
+    app.kubernetes.io/version: "20260910-897a44bb0"
     app.kubernetes.io/component: kafka-channel-dispatcher
     app.kubernetes.io/name: knative-eventing
 spec:
@@ -309,7 +309,7 @@ spec:
       name: kafka-channel-dispatcher
       labels:
         app: kafka-channel-dispatcher
-        app.kubernetes.io/version: "20260907-f8b215f54"
+        app.kubernetes.io/version: "20260910-897a44bb0"
         app.kubernetes.io/component: kafka-channel-dispatcher
         app.kubernetes.io/name: knative-eventing
         app.kubernetes.io/kind: kafka-dispatcher
@@ -336,7 +336,7 @@ spec:
         runAsUser: 1001
       containers:
         - name: kafka-channel-dispatcher
-          image: gcr.io/knative-nightly/knative-kafka-broker-dispatcher-loom@sha256:d32d083a008fac415969bfebd610d02e9193c08d9e963e1bfc3857ae4e240b5e
+          image: gcr.io/knative-nightly/knative-kafka-broker-dispatcher-loom@sha256:506d891b9d79fee0f100b3db3d27e3153cd4b49f57341e55fae5c2f81fd3f75c
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - mountPath: /etc/config
@@ -472,7 +472,7 @@ metadata:
   namespace: knative-eventing
   labels:
     app: kafka-channel-receiver
-    app.kubernetes.io/version: "20260907-f8b215f54"
+    app.kubernetes.io/version: "20260910-897a44bb0"
     app.kubernetes.io/component: kafka-channel-receiver
     app.kubernetes.io/name: knative-eventing
 spec:
@@ -484,7 +484,7 @@ spec:
       name: kafka-channel-receiver
       labels:
         app: kafka-channel-receiver
-        app.kubernetes.io/version: "20260907-f8b215f54"
+        app.kubernetes.io/version: "20260910-897a44bb0"
         app.kubernetes.io/component: kafka-channel-receiver
         app.kubernetes.io/name: knative-eventing
         app.kubernetes.io/kind: kafka-receiver
@@ -511,7 +511,7 @@ spec:
         runAsUser: 1001
       containers:
         - name: kafka-channel-receiver
-          image: gcr.io/knative-nightly/knative-kafka-broker-receiver-loom@sha256:7ebaec838aad77b9dffd91aaefd1471ba77cc826385b7ede9c7d8356b2aaef64
+          image: gcr.io/knative-nightly/knative-kafka-broker-receiver-loom@sha256:3b2023c570600b78d339658038285ad5dc553dd0f4caf8ed67c19c906e7fd56b
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - mountPath: /etc/config
@@ -646,7 +646,7 @@ metadata:
   namespace: knative-eventing
   labels:
     app: kafka-channel-receiver
-    app.kubernetes.io/version: "20260907-f8b215f54"
+    app.kubernetes.io/version: "20260910-897a44bb0"
     app.kubernetes.io/component: kafka-channel-receiver
     app.kubernetes.io/name: knative-eventing
 spec:
